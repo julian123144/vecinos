@@ -1,0 +1,150 @@
+@import "../../../src/theme/custom-variables.scss";
+.left-container {
+  flex: 6;
+  padding-top: 0px;
+  .address {
+    font-size: .8em;
+    color: white;
+  }
+  .payment {
+    margin-top: -5px;
+    font-size: 1.2em;
+    color: white;
+  }
+}
+.right-container {
+  flex: 2;
+  text-align: right;
+  .avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 20px;
+    background-image: url(https://bravewords.com/medias-static/images/news/2016/5819FCBB-late-queen-singer-freddie-mercury-on-i-want-to-break-free-music-video-it-still-makes-me-chuckle-every-time-i-see-it-rare-bbc-1-audio-interview-streaming-image.jpg);
+    background-size: cover;
+    background-position: center;
+    float: right;
+    margin-right: 15px;
+    .badge {
+      margin-left: 10px;
+      text-align: center;
+      font-size: .7em;
+      background-color: rgb(255, 217, 0);
+      display: inline-block;
+      border-radius: 25px;
+      width: 15px;
+      height: 15px;
+      margin: auto;
+      position: absolute;
+      right: 10px;
+    }
+  }
+}
+.announcement-card-container {
+  padding-top: 0px;
+  .announcement-card {
+    box-shadow: 0 30px 60px 0 rgba(138,149,158,0.20);
+    background-color: white;
+    border-radius: 5px;
+    padding: 15px;
+    .info-container {
+      flex: 5;
+      ion-button {
+        margin-top: 10px;
+      }
+      .announcement-text {
+        font-size: .9em;
+        color: rgb(88, 88, 88);
+      }
+    }
+    position: relative;
+    .picture-container {
+      flex: 3;
+      img {
+        max-width: none;
+        height: 130px;
+        position: absolute;
+        right: 0px;
+        bottom: 10px;
+      }
+    }
+  }
+}
+.section-header {
+  margin-left: 15px;
+}
+.services-container {
+  padding: 10px 15px;
+  .service {
+    text-align: center;
+    margin-right: 10px;
+    display: inline-block;
+    width: 60px;
+    .service-icon {
+      text-align: center;
+      background-color: $accent-color;
+      color: white;
+      font-size: 1.9em;
+      padding: 10px;
+      border-radius: 15px;
+      padding-top: 15px;
+    }
+    .service-name {
+      font-size: .7em;
+    }
+  }
+}
+.home-visit {
+  display: inline-block;
+  background-color: $base-color;
+  color: white;
+  margin-left: 15px;
+  width: 150px;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px;
+  position: relative;
+  margin-top: 35px;
+  padding-top: 35px;
+  .home-visit-name {
+    margin-bottom: 10px;
+  }
+  .home-visit-avatar {
+    border: 5px solid $base-color;
+    background-size: cover;
+    background-position: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    position: absolute;
+    display: inline-block;
+    margin: auto;
+    top: -35px;
+  }
+}
+.income-outcome {
+  padding: 10px;
+  display: flex;
+  margin-bottom: 10px;
+  .concept {
+    flex: 4;
+    .date {
+      font-size: .8em;
+      color: rgb(94, 94, 94);
+    }
+    .text {
+      font-family: 'Oswald';
+    }
+  }
+  .green {
+    color: rgb(83, 130, 8);
+  }
+  .red {
+    color: rgb(130, 8, 8);
+  }
+  .amount {
+    text-align: right;
+    font-size: 1.2em;
+    font-weight: bold;
+    flex: 3;
+  }
+}

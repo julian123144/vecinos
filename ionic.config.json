@@ -1,0 +1,7 @@
+{
+  "name": "colonias-app-vecinos",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,60 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary" *ngIf="user?.user?.id">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <div id="logo">
+    <div></div>
+  </div>
+
+  <div *ngIf="user?.user?.id" class="white-shadow-container ion-padding ion-margin">
+    <div class="oswald-font">Hola, {{user?.user?.name}}</div>
+    <div>{{user?.user?.email}}</div>
+    <hr />
+    <ion-button color="warning" (click)="logout()" expand="full">
+      Salir
+    </ion-button>
+  </div>
+
+  <div *ngIf="!user?.user?.id">
+    <div class="form-container ion-padding ion-margin">
+      <div *ngIf="operation == 'register'" class="form-input">
+        <ion-input placeholder="Nombre" [(ngModel)]="credentials.name" type="text"></ion-input>
+      </div>
+      <div class="form-input">
+        <ion-input placeholder="Email" [(ngModel)]="credentials.email" type="email"></ion-input>
+      </div>
+      <div class="form-input">
+        <ion-input placeholder="Password" [(ngModel)]="credentials.password" type="password"></ion-input>
+      </div>
+      <span *ngIf="operation == 'login'" (click)="resetPassword()" class="forgot-password" block>Olvidé mi Contraseña</span>
+      <div *ngIf="operation == 'register'" class="form-input">
+        <ion-input placeholder="Repetir" [(ngModel)]="credentials.c_password" type="password"></ion-input>
+      </div>
+      <div *ngIf="operation == 'register'" class="form-input">
+        <ion-label>Calle</ion-label>
+        <ion-select [(ngModel)]="credentials.street">
+          <ion-select-option *ngFor="let st of streets" [value]="st">{{st.name}}</ion-select-option>
+        </ion-select>
+      </div>
+      <div *ngIf="operation == 'register'" class="form-input">
+        <ion-input placeholder="Número" [(ngModel)]="credentials.street_number" type="number"></ion-input>
+      </div>
+    </div>
+
+    <div class="ion-padding">
+      <ion-button color="light" *ngIf="operation == 'login'" (click)="login()" expand="block">Ingresar</ion-button>
+      <ion-button color="light" *ngIf="operation == 'register'" (click)="register()" expand="block">Registrarse</ion-button>
+
+      <div class="secondary-options-container">
+        <span (click)="operation = 'login'" *ngIf="operation == 'register'">Ya tienes cuenta? <b>Click Aquí</b></span>
+        <span (click)="operation = 'register'" *ngIf="operation == 'login'">Aun no tienes cuenta? <b>Click Aquí</b></span>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

@@ -1,0 +1,122 @@
+@import "./custom-variables.scss";
+body {
+  font-family: 'Roboto';
+}
+ion-content {
+  --ion-background-color: #F7F6FF;
+}
+.background-filler {
+  z-index: -1;
+  background-color: $base-color;
+  height: 150px;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  overflow: hidden;
+}
+.white-shadow-container {
+  background: white;
+  box-shadow: 0 30px 60px 0 rgba(138,149,158,0.20);
+  border-radius: 5px;
+  .title {
+    font-weight: bold;
+  }
+  .subtitle {
+    font-size: .9em;
+    color: gray;
+  }
+}
+.title1 {
+  font-size: 3rem;
+}
+.title2 {
+  font-size: 2rem;
+}
+.title3 {
+  font-size: 1.5rem;
+}
+.circle-container-with-icon {
+  background: #F1EFFC;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  text-align: center;
+  ion-icon {
+    color: $base-color;
+    font-size: 1.5rem;
+    margin-top: .5rem;
+  }
+}
+.header-internal-page {
+  display: flex;
+  background-color: $base-color;
+  padding: 30px 15px;
+  color: white;
+  .title-container {
+    flex: 7;
+  }
+  .action-container {
+    flex: 3;
+    text-align: right;
+    padding-top: 8px;
+    ion-icon {
+      margin-left: 10px;
+      font-size: 1.5em;
+    }
+  }
+}
+.m-t-15 {
+  margin-top: 15px;
+}
+.m-t-30 {
+  margin-top: 30px;
+}
+.img-fluid {
+  width: 100%;
+}
+.oswald-font {
+  font-family: 'Oswald';
+}
+.roboto-font {
+  font-family: 'Roboto';
+}
+.image-background-header {
+  height: 250px;
+  background-image: url(https://esaucamelo.com.mx/wp-content/uploads/2019/06/08-SANTORINI-ACCESO-PRIVADA.png);
+  background-size: cover;
+  background-position: center;
+  filter: blur(2px);
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+.action-container-header {
+  text-align: right;
+  display: block;
+  ion-icon {
+    float: right;
+    color: white;
+    font-size: 1.5em;
+    padding-left: 10px;
+  }
+}
+.visit-info-container {
+  background-color: $base-color;
+  margin: 15px;
+  padding: 15px;
+  margin-top: 60px;
+  border-radius: 5px;
+  color: white;
+}
+.display-flex {
+  display: flex;
+}
+.scroll-horizontal {
+  overflow: auto;
+  white-space: nowrap;
+  padding: 15px 0 20px 0;
+}
+.base-background-color {
+  background-color: $base-color !important;
+}

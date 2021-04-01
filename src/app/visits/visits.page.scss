@@ -1,0 +1,35 @@
+@import "../../../src/theme/custom-variables.scss";
+.visit {
+  margin-top: 15px;
+  display: flex;
+  padding: 10px;
+  .avatar-container {
+    flex: 2;
+    .avatar {
+      background-size: cover;
+      background-position: 0;
+      width: 60px;
+      height: 60px;
+      border-radius: 30px;
+      border: 3px solid $accent-color;
+      background-color: $accent-color;
+      .initials {
+        text-align: center;
+        font-size: 1.6em;
+        margin: auto;
+        margin-top: 10px;
+        color: white;
+      }
+    }
+  }
+  .details-container {
+    flex: 6;
+    padding-left: 10px;
+    margin: auto;
+  }
+  .action-container {
+    flex: 2;
+    text-align: right;
+    margin: auto;
+  }
+}

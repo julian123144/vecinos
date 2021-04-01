@@ -1,0 +1,171 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="background-filler"></div>
+  <div class="top-container display-flex">
+    <div class="left-container ion-padding">
+      <div class="address">San Mateo 220</div>
+      <div class="payment">
+        <span class="oswald-font">$400 a Pagar</span>
+      </div>
+    </div>
+    <div class="right-container">
+      <div class="avatar">
+        <div class="badge">4</div>
+      </div>
+    </div>
+  </div>
+  <div class="announcement-card-container ion-padding">
+    <div class="announcement-card display-flex">
+      <div class="info-container">
+        <div class="announcement-text">A partir de este 19 de Mayo, cambia el protocolo de acceso a la colonia.</div>
+        <ion-button color="warning" size="small">Ver Protocolo</ion-button>
+      </div>
+      <div class="picture-container">
+        <img src="https://www.freeiconspng.com/uploads/happy-family-png-20.png" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="section-header oswald-font">Servicios</div>
+  <div class="scroll-horizontal services-container">
+    <div class="service">
+      <div class="service-icon base-background-color">
+        <ion-icon name="bookmarks"></ion-icon>
+      </div>
+      <div class="service-name">
+        Aportación
+      </div>
+    </div>
+    <div class="service" [routerLink]="['/visits']">
+      <div class="service-icon">
+        <ion-icon name="people"></ion-icon>
+      </div>
+      <div class="service-name">
+        Visitas
+      </div>
+    </div>
+    <div class="service">
+      <div class="service-icon">
+        <ion-icon name="settings"></ion-icon>
+      </div>
+      <div class="service-name">
+        Directorio
+      </div>
+    </div>
+    <div class="service">
+      <div class="service-icon">
+        <ion-icon name="card"></ion-icon>
+      </div>
+      <div class="service-name">
+        Pagos
+      </div>
+    </div>
+    <div class="service">
+      <div class="service-icon">
+        <ion-icon name="cash"></ion-icon>
+      </div>
+      <div class="service-name">
+        Finanzas
+      </div>
+    </div>
+    <div class="service">
+      <div class="service-icon">
+        <ion-icon name="alarm"></ion-icon>
+      </div>
+      <div class="service-name">
+        Morosos
+      </div>
+    </div>
+    <div class="service">
+      <div class="service-icon">
+        <ion-icon name="calendar"></ion-icon>
+      </div>
+      <div class="service-name">
+        Reservas
+      </div>
+    </div>
+    <div class="service">
+      <div class="service-icon">
+        <ion-icon name="bar-chart"></ion-icon>
+      </div>
+      <div class="service-name">
+        Encuestas
+      </div>
+    </div>
+    <div class="service">
+      <div class="service-icon">
+        <ion-icon name="bar-chart"></ion-icon>
+      </div>
+      <div class="service-name">
+        Reglamentos
+      </div>
+    </div>
+    <div class="service">
+      <div class="service-icon">
+        <ion-icon name="mail"></ion-icon>
+      </div>
+      <div class="service-name">
+        Contacto
+      </div>
+    </div>
+  </div>
+
+  <div class="section-header oswald-font">Visitas de Hoy</div>
+  <div class="scroll-horizontal todays-visits">
+    <div class="home-visit" *ngFor="let visit of visits">
+      <div class="home-visit-avatar" style="background-image: url({{visit.picture}});"></div>
+      <div class="home-visit-name">{{visit.name}}</div>
+      <ion-button color="danger" expand="block" size="small">Cancelar</ion-button>
+    </div>
+  </div>
+
+  <div class="section-header oswald-font">Ingresos / Egresos del Mes</div>
+  <div class="ion-padding">
+    <div class="white-shadow-container income-outcome">
+      <div class="concept">
+        <div class="date">19 de Abril</div>
+        <div class="text">Aportaciones en Efectivo</div>
+      </div>
+      <div class="amount green">
+        {{19800 | currency}}
+      </div>
+    </div>
+    <div class="white-shadow-container income-outcome">
+      <div class="concept">
+        <div class="date">22 de Abril</div>
+        <div class="text">Reparación de Fuga</div>
+      </div>
+      <div class="amount red">
+        {{3200 | currency}}
+      </div>
+    </div>
+    <div class="white-shadow-container income-outcome">
+      <div class="concept">
+        <div class="date">24 de Abril</div>
+        <div class="text">Recolección de PET</div>
+      </div>
+      <div class="amount green">
+        {{940.80 | currency}}
+      </div>
+    </div>
+    <div class="white-shadow-container income-outcome">
+      <div class="concept">
+        <div class="date">25 de Abril</div>
+        <div class="text">Pago de Seguridad</div>
+      </div>
+      <div class="amount red">
+        {{45000 | currency}}
+      </div>
+    </div>
+  </div>
+  <div class="sos-container">
+
+  </div>
+  
+</ion-content>

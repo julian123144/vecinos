@@ -1,0 +1,52 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Agregar Visita</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="background-filler"></div>
+  <div class="form-container" *ngIf="visitForm" [formGroup]="visitForm">
+    <ion-item *ngIf="addresses">
+      <ion-label position="stacked">*Dirección</ion-label>
+      <ion-select (change)="changeAddress($event)" formControlName="user_address_id">
+        <ion-select-option *ngFor="let address of addresses" [value]="address.id">
+          {{address.description}}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">*Visitante</ion-label>
+      <ion-input id="visitorName" formControlName="visitorName" required
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Es visita frecuente?</ion-label>
+      <ion-checkbox id="isFrequent" formControlName="isFrequent" required
+      ></ion-checkbox>
+    </ion-item>
+    <ion-item *ngIf="!visitForm.value.isFrequent">
+      <ion-label position="stacked">*Fecha de la Visita</ion-label>
+      <ion-datetime displayFormat="DD MM YYYY" placeholder="Seleccione Feha"
+      id="visitDate" formControlName="visitDate"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Comentarios (Opcional)</ion-label>
+      <ion-textarea id="comments" formControlName="comments"
+      ></ion-textarea>
+    </ion-item>
+
+    <div class="m-t-15">
+      <ion-button (click)="save()" expand="block" 
+      [disabled]="!visitForm.valid || (visitForm.value.isFrequent && !visitForm.value.visitorName)">
+        Guardar
+      </ion-button>
+      <ion-button (click)="cancel()" color="light" expand="block">
+        Cancelar
+      </ion-button>
+    </div>
+  </div>
+
+</ion-content>

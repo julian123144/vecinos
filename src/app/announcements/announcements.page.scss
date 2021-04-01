@@ -1,0 +1,21 @@
+@import "../../../src/theme/custom-variables.scss";
+.visit-info-container {
+    background-color: $base-color;
+    margin: 15px;
+    padding: 15px;
+    margin-top: 60px;
+    border-radius: 5px;
+    color: white;
+    .qr-container {
+        padding: 15px;
+        img {
+            width: 100%;
+        }
+    }
+    .qr-text {
+      text-align: center;
+      font-size: 2.3em;
+      font-family: monospace;
+      text-transform: uppercase;
+    }
+}
